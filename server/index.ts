@@ -14,4 +14,30 @@ app.get('/api/random-word', async (c) => {
 	return c.json({ word: result.word })
 })
 
+app.delete('/api/word/:word', async (c) => {
+	const word = c.req.param('word')
+	const result = await c.env.DB.prepare(
+		"DELETE FROM words WHERE word = ?"
+	).bind(word).run()
+
+	if (result.meta.changes === 0) {
+		return c.json({ error: "Word not found" }, 404)
+	}
+
+	return c.json({ success: true })
+})
+
+app.post('/api/word/:word', async (c) => {
+	const word = c.req.param('word')
+	const result = await c.env.DB.prepare(
+		"UPDATE words SET use_count = use_count + 1, last_used = datetime('now') WHERE word = ?"
+	).bind(word).run()
+
+	if (result.meta.changes === 0) {
+		return c.json({ error: "Word not found" }, 404)
+	}
+
+	return c.json({ success: true })
+})
+
 export default app

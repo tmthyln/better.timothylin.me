@@ -4,13 +4,11 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <div class="columns is-multiline">
-    <div class="column is-half">
+    <div class="column is-full">
       <div class="card">
         <div class="card-content">
-          <p class="title">Welcome</p>
-          <p class="subtitle">Get started with Better</p>
           <div class="content">
-            Practice and improve your speech with timed word exercises.
+            Communication tips here!
           </div>
         </div>
       </div>
@@ -19,10 +17,11 @@ import { RouterLink } from 'vue-router'
     <div class="column is-half">
       <div class="card">
         <div class="card-content">
-          <p class="title">Speech Words</p>
-          <p class="subtitle">Practice speaking</p>
+          <p class="title">Talk about a Word</p>
+          <p class="subtitle">Talk coherently about a word for a fixed amount of time</p>
           <div class="content">
-            Read random words aloud and track your timing.
+            You will be presented with a randomly selected (probably English) word.
+            Your task will be to talk coherently about the word until time runs out.
           </div>
         </div>
         <footer class="card-footer">
