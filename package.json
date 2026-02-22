@@ -24,7 +24,7 @@
 		"@types/node": "^24.10.9",
 		"@vitejs/plugin-vue": "^6.0.3",
 		"@vue/tsconfig": "^0.8.1",
-		"hono": "^4.11.7",
+		"hono": "^4.11.10",
 		"npm-run-all2": "^8.0.4",
 		"sass-embedded": "^1.97.3",
 		"typescript": "~5.9.3",
